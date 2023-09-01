@@ -1,12 +1,12 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: blank-html
+  name: k8s-blank-html
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: blank-html
+    name: bk8s-blank-html
   minReplicas: 2
   maxReplicas: 4
   metrics:
