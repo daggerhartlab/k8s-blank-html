@@ -12,12 +12,12 @@ spec:
   secretName: letsencrypt-nginx
   rules:
     - host: fluxpoc.daglab.dev
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: k8s-blank-html
-            port:
-              number: 443
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: k8s-blank-html
+                port:
+                  number: 443
