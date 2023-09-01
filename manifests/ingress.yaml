@@ -8,16 +8,17 @@ metadata:
     cert-manager.io/issuer: letsencrypt-nginx
 spec:
   tls:
-  - hosts: fluxpoc.daglab.dev
-  secretName: letsencrypt-nginx
+  - hosts:
+    - fluxpoc.daglab.dev
+    secretName: letsencrypt-nginx
   rules:
-    - host: fluxpoc.daglab.dev
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: k8s-blank-html
-                port:
-                  number: 443
+  - host: fluxpoc.daglab.dev
+    http:
+      paths:
+      - pathType: Prefix
+      path: "/"
+      backend:
+        service:
+          name: k8s-blank-html
+          port:
+          number: 443
